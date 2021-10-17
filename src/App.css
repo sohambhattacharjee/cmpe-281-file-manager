@@ -1,0 +1,34 @@
+:root {
+  --main-primary-color: rgb(0, 127, 134);
+}
+.App {
+  background-color: rgb(245, 247, 247);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex: 1 1 0%;
+  position: relative;
+}
+
+
+.layout{
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgb(0 0 0 / 12%) 0px 0.0625rem 0.25rem;
+  border-radius: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#root{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.hv-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

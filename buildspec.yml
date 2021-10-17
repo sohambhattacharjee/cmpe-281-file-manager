@@ -8,12 +8,15 @@ phases:
       # Install dependencies needed for running tests
       - npm install
 
+      # Run build
+      - npm run build
+
       # Upgrade AWS CLI to the latest version
       - pip3 install --upgrade awscli
-  pre_build:
-    commands:
-      # Discover and run unit tests in the 'tests' directory
-      - npm test
+  # pre_build:
+  #   commands:
+  #     # Discover and run unit tests in the 'tests' directory
+  #     - CI=true npm test --passWithNoTests
   post_build:
     commands:
       # Remove existing node_modules to clear dev dependencies
@@ -31,8 +34,10 @@ artifacts:
     - README.md
     - package.json
     - app.js
+    - src/service/**/*
     - appspec.yml
     - scripts/*
     - node_modules/**/*
     - public/**/*
+    - build/**/*
     - template-configuration.json
